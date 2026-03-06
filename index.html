@@ -333,6 +333,56 @@
     object-fit: contain;
   }
 
+  .vendor-logo.text-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    color: #fff;
+    background: none;
+  }
+
+  .vendor-logo.oppo { background: linear-gradient(135deg, #1a6b3c, #2ecc71); }
+  .vendor-logo.vivo { background: linear-gradient(135deg, #003cff, #7b61ff); }
+  .vendor-logo.lenovo { background: linear-gradient(135deg, #e60012, #ff4d4d); }
+  .vendor-logo.meizu { background: linear-gradient(135deg, #4a90d9, #00d4ff); }
+
+  /* Source references */
+  .vendor-sources {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,240,255,0.06);
+  }
+
+  .vendor-sources-label {
+    font-size: 9px;
+    color: var(--text-dim);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .vendor-sources a {
+    display: block;
+    font-size: 10.5px;
+    color: var(--text-dim);
+    text-decoration: none;
+    line-height: 1.7;
+    transition: color 0.2s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .vendor-sources a:hover {
+    color: var(--accent-cyan);
+  }
+
+  .vendor-sources a::before {
+    content: '↗ ';
+    opacity: 0.5;
+  }
+
   .vendor-info h3 {
     font-size: 15px;
     font-weight: 700;
@@ -627,13 +677,18 @@
             <div class="img-caption">华为 MWC 2026 展台</div>
           </div>
         </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="https://new.qq.com/rain/a/20260301A056J200" target="_blank">华为发布U6GHz全系列产品,释放5G-A潜能 — 腾讯网</a>
+          <a href="https://new.qq.com/rain/a/20260304A0429X00" target="_blank">华为杨超斌谈6G发展:标准化已启动 — 腾讯网</a>
+        </div>
       </div>
     </article>
 
     <!-- OPPO -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo"><img src="images/logo_oppo.png" alt="OPPO"></div>
+        <div class="vendor-logo text-logo oppo">OPPO</div>
         <div class="vendor-info">
           <h3>OPPO</h3>
           <span class="vendor-tag">端侧大模型 Omni · 多模态AI先锋</span>
@@ -650,6 +705,11 @@
             <img src="images/oppo_omni.jpg" alt="OPPO端侧Omni模型" loading="lazy">
             <div class="img-caption">端侧 Omni 多模态大模型演示</div>
           </div>
+        </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="https://tech.ifeng.com/c/8rFf90jvPMQ" target="_blank">OPPO端侧全模态Omni模型正式亮相 — 凤凰网</a>
+          <a href="https://finance.sina.com.cn/tech/roll/2026-03-06/doc-inhpzkwr9327550.shtml" target="_blank">OPPO端网云智能通信 端侧全模态AI双突破 — 新浪财经</a>
         </div>
       </div>
     </article>
@@ -690,13 +750,18 @@
             <div class="img-caption">Robot Phone</div>
           </div>
         </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="https://www.thepaper.cn/newsDetail_forward_32699244" target="_blank">MWC观察丨"新物种"Robot Phone能给手机硬件创新带来什么? — 澎湃新闻</a>
+          <a href="https://www.sohu.com/a/992592424_362225" target="_blank">荣耀MWC 2026发布AHI理念 携Robot Phone等新品 — 搜狐</a>
+        </div>
       </div>
     </article>
 
     <!-- vivo -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo"><img src="images/logo_vivo.png" alt="vivo"></div>
+        <div class="vendor-logo text-logo vivo">vivo</div>
         <div class="vendor-info">
           <h3>vivo</h3>
           <span class="vendor-tag">X300 Ultra & 专业影像平台</span>
@@ -721,6 +786,11 @@
             <img src="images/vivo_new.png" alt="vivo X300 Ultra摄影套件" loading="lazy">
             <div class="img-caption">X300 Ultra 专业摄影套件</div>
           </div>
+        </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="http://tech.hexun.com/2026-03-03/223580611.html" target="_blank">vivo X300 Ultra亮相MWC 2026:配备400mm增距镜 — 和讯网</a>
+          <a href="http://news.pconline.com.cn/2108/21083112.html" target="_blank">口袋里的摄影机!vivo X300 Ultra视频能力巨幅提升 — 太平洋科技</a>
         </div>
       </div>
     </article>
@@ -752,6 +822,11 @@
             <div class="img-caption">小米纯电超跑 VGT 概念车</div>
           </div>
         </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="https://new.qq.com/rain/a/20260301A02P1V00" target="_blank">中国首款VGT概念车Xiaomi Vision GT正式公布 — 腾讯网</a>
+          <a href="https://finance.sina.com.cn/roll/2026-03-05/doc-inhpxspk3183992.shtml" target="_blank">MWC观察:小米Vision GT的现实"阳谋" — 新浪财经</a>
+        </div>
       </div>
     </article>
 
@@ -778,6 +853,11 @@
             <img src="images/tecno_new.jpg" alt="传音磁吸模块化概念机" loading="lazy">
             <div class="img-caption">磁吸模块化概念机</div>
           </div>
+        </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="https://www.sohu.com/a/991808058_362225" target="_blank">传音Tecno在MWC2026秀创新实力,4.9mm超薄模块化磁吸手机 — 搜狐</a>
+          <a href="https://www.ithome.com/0/923/529.htm" target="_blank">传音预热超薄模块化智能手机,将亮相MWC 2026 — IT之家</a>
         </div>
       </div>
     </article>
@@ -809,13 +889,18 @@
             <div class="img-caption">Ulefone 三防手机实拍</div>
           </div>
         </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="https://new.qq.com/rain/a/20260228A05N6R00" target="_blank">手机摄像头能拆下来用?Ulefone新机有点意思 — 腾讯网</a>
+          <a href="https://new.qq.com/rain/a/20260228A0702R00" target="_blank">镜头能拆还能单独拍摄?国产手机新品即将亮相MWC2026 — 腾讯网</a>
+        </div>
       </div>
     </article>
 
     <!-- 联想 -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo"><img src="images/logo_lenovo.png" alt="联想"></div>
+        <div class="vendor-logo text-logo lenovo">联想</div>
         <div class="vendor-info">
           <h3>联想 Lenovo</h3>
           <span class="vendor-tag">AI Workmate & Legion Go Fold</span>
@@ -852,13 +937,18 @@
             <div class="img-caption">Legion Go Fold</div>
           </div>
         </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="https://finance.sina.com.cn/tech/roll/2026-03-03/doc-inhpsxzq4673875.shtml" target="_blank">联想展示AI Workmate概念机:打工人的桌面搭子 — 新浪财经</a>
+          <a href="https://finance.sina.com.cn/tech/roll/2026-03-03/doc-inhpsxzi4014367.shtml" target="_blank">联想展示拯救者Legion Go Fold概念掌机 — 新浪财经</a>
+        </div>
       </div>
     </article>
 
     <!-- 魅族 -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo"><img src="images/logo_meizu.png" alt="魅族"></div>
+        <div class="vendor-logo text-logo meizu">魅族</div>
         <div class="vendor-info">
           <h3>魅族 Meizu</h3>
           <span class="vendor-tag">全面终止传统手机硬件研发</span>
@@ -868,6 +958,11 @@
         <div class="strategy-tag">All in AI：全面战略收缩硬件，转向AI驱动软件产品</div>
         <div class="vendor-desc">
           辟谣退市传闻，但确认因市场高度内卷及内存涨价等原因，<strong>正式暂停国内手机新品自研硬件项目</strong>。转向以AI驱动软件产品为主导的发展方向，押注Flyme开放生态系统
+        </div>
+        <div class="vendor-sources">
+          <div class="vendor-sources-label">Sources</div>
+          <a href="https://new.qq.com/rain/a/20260227A05JEA00" target="_blank">魅族科技战略转型:暂停国内手机新产品自研硬件项目 — 腾讯网</a>
+          <a href="https://finance.jrj.com.cn/2026/03/02085756138481.shtml" target="_blank">魅族暂停手机自研硬件,全面转向AI软件与Flyme开放生态 — 金融界</a>
         </div>
       </div>
     </article>

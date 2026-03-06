@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MWC 2026 核心厂商参展亮点</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #040810;
+    --bg-card: rgba(8, 18, 38, 0.85);
+    --accent-cyan: #00f0ff;
+    --accent-blue: #0066ff;
+    --accent-purple: #8b5cf6;
+    --accent-magenta: #ff00aa;
+    --text-primary: #e8edf5;
+    --text-secondary: #8899b0;
+    --text-dim: #4a5568;
+    --border-glow: rgba(0, 240, 255, 0.15);
+    --gradient-hero: linear-gradient(135deg, #0a0f1c 0%, #0d1b3e 40%, #1a0a2e 100%);
+    --grid-color: rgba(0, 240, 255, 0.04);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* ===== Grid Background ===== */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ===== Noise Overlay ===== */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  .page-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+
+  /* ===== HERO SECTION ===== */
+  .hero {
+    position: relative;
+    padding: 48px 20px 40px;
+    background: var(--gradient-hero);
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-glow);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0,240,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 8s ease-in-out infinite;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139,92,246,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 10s ease-in-out infinite reverse;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.15); opacity: 1; }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 240, 255, 0.08);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent-cyan);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    animation: fadeSlideUp 0.6s ease;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+    box-shadow: 0 0 8px var(--accent-cyan);
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero h1 {
+    font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+    font-size: clamp(28px, 7vw, 42px);
+    font-weight: 900;
+    line-height: 1.15;
+    background: linear-gradient(135deg, #fff 0%, var(--accent-cyan) 50%, var(--accent-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+    animation: fadeSlideUp 0.8s ease 0.1s both;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 520px;
+    position: relative;
+    z-index: 2;
+    animation: fadeSlideUp 0.8s ease 0.2s both;
+  }
+
+  .hero-subtitle strong {
+    color: var(--accent-cyan);
+    font-weight: 500;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    position: relative;
+    z-index: 2;
+    animation: fadeSlideUp 0.8s ease 0.3s both;
+  }
+
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hero-meta-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .hero-meta-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent-cyan);
+  }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== KEY INSIGHTS SECTION ===== */
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+
+  .section-label .line {
+    width: 3px;
+    height: 18px;
+    background: var(--accent-cyan);
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(0,240,255,0.4);
+  }
+
+  .section-label h2 {
+    font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+  }
+
+  .insights {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .insight-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glow);
+    border-radius: 12px;
+    padding: 16px 18px;
+    backdrop-filter: blur(12px);
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .insight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .insight-card:hover::before { opacity: 1; }
+  .insight-card:hover { border-color: rgba(0,240,255,0.3); }
+
+  .insight-icon {
+    font-size: 20px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .insight-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    margin-bottom: 6px;
+  }
+
+  .insight-desc {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* ===== VENDOR SECTION ===== */
+  .vendor-section {
+    margin-top: 36px;
+    padding: 0 16px;
+  }
+
+  .vendor-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glow);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.6s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .vendor-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px 12px;
+    border-bottom: 1px solid rgba(0,240,255,0.06);
+  }
+
+  .vendor-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .vendor-logo.huawei { background: linear-gradient(135deg, #c41230, #ff3355); }
+  .vendor-logo.oppo { background: linear-gradient(135deg, #1a6b3c, #2ecc71); }
+  .vendor-logo.honor { background: linear-gradient(135deg, #0055ff, #00ccff); }
+  .vendor-logo.vivo { background: linear-gradient(135deg, #003cff, #7b61ff); }
+  .vendor-logo.xiaomi { background: linear-gradient(135deg, #ff6b00, #ff2d55); }
+  .vendor-logo.tecno { background: linear-gradient(135deg, #1a1a2e, #4a4ae8); }
+  .vendor-logo.ulefone { background: linear-gradient(135deg, #2d5016, #5cb85c); }
+  .vendor-logo.lenovo { background: linear-gradient(135deg, #e60012, #ff4d4d); }
+  .vendor-logo.meizu { background: linear-gradient(135deg, #4a90d9, #00d4ff); }
+
+  .vendor-info h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+
+  .vendor-info .vendor-tag {
+    font-size: 11px;
+    color: var(--accent-cyan);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.5px;
+  }
+
+  .vendor-body {
+    padding: 14px 18px 18px;
+  }
+
+  .vendor-product {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .vendor-product::before {
+    content: '▸';
+    color: var(--accent-magenta);
+  }
+
+  .vendor-desc {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+
+  .vendor-desc strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .vendor-highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .vendor-highlights li {
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.6;
+  }
+
+  .vendor-highlights li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+    box-shadow: 0 0 6px var(--accent-cyan);
+  }
+
+  .vendor-price {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 240, 255, 0.06);
+    border: 1px solid rgba(0, 240, 255, 0.12);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--accent-cyan);
+    margin-bottom: 14px;
+  }
+
+  .vendor-price .label {
+    color: var(--text-dim);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .vendor-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .vendor-images.single {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-images.triple {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .vendor-images.triple .img-wrap:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .img-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16/10;
+    background: rgba(0,240,255,0.03);
+    border: 1px solid rgba(0,240,255,0.06);
+  }
+
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .img-wrap:hover img {
+    transform: scale(1.03);
+  }
+
+  .img-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 10px 6px;
+    background: linear-gradient(transparent, rgba(4,8,16,0.85));
+    font-size: 10px;
+    color: var(--text-dim);
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+  }
+
+  /* ===== STRATEGY TAG ===== */
+  .strategy-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 10.5px;
+    color: var(--accent-purple);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+  }
+
+  /* ===== DIVIDER ===== */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-glow), transparent);
+    margin: 8px 16px 0;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 40px 20px 24px;
+    border-top: 1px solid var(--border-glow);
+    margin-top: 20px;
+  }
+
+  .footer p {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+  }
+
+  /* ===== SCROLL ANIMATIONS ===== */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 400px) {
+    .hero { padding: 36px 16px 32px; }
+    .hero-meta { gap: 16px; flex-wrap: wrap; }
+    .vendor-images { grid-template-columns: 1fr; }
+    .vendor-images.triple .img-wrap:first-child { grid-column: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-badge"><span>LIVE REPORT</span></div>
+    <h1>MWC 2026</h1>
+    <p class="hero-subtitle">
+      核心手机厂商参展亮点与动态总结<br>
+      各大厂商正通过大模型探索手机以外的<strong>新型AI终端形态</strong>，<strong>"具身智能"</strong>与<strong>"端侧AI"</strong>成为焦点
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">DATE</span>
+        <span class="hero-meta-value">2026.03</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">LOCATION</span>
+        <span class="hero-meta-value">BARCELONA</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== KEY INSIGHTS ===== -->
+  <div class="section-label">
+    <div class="line"></div>
+    <h2>KEY INSIGHTS</h2>
+  </div>
+
+  <div class="insights">
+    <div class="insight-card animate-on-scroll">
+      <span class="insight-icon">🤖</span>
+      <div class="insight-title">手机厂商转型机器人赛道</div>
+      <div class="insight-desc">硬件方面（电机、传感器、芯片）与人形机器人高度通用，手机厂商在传感器融合、图像处理等技术线上积累的经验可直接应用于机器人开发</div>
+    </div>
+    <div class="insight-card animate-on-scroll">
+      <span class="insight-icon">📸</span>
+      <div class="insight-title">影像系统持续「向上突破」</div>
+      <div class="insight-desc">从手机内置镜头竞赛升级到外接模块化摄影系统，专业影像平台化趋势明显，手持Cage、400mm外接长焦等方案涌现</div>
+    </div>
+    <div class="insight-card animate-on-scroll">
+      <span class="insight-icon">🧩</span>
+      <div class="insight-title">模块化与磁吸生态兴起</div>
+      <div class="insight-desc">传音等厂商展示磁吸模块化概念，通过标准化接口实现影像、音频、能源等模块可拆卸组合，重新定义手机形态</div>
+    </div>
+    <div class="insight-card animate-on-scroll">
+      <span class="insight-icon">💡</span>
+      <div class="insight-title">AI从屏幕走向空间</div>
+      <div class="insight-desc">联想AI Workmate将信息投影到物理空间、魅族全面转向AI驱动软件产品——AI正在突破屏幕限制进入「空间计算」时代</div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== VENDOR HIGHLIGHTS ===== -->
+  <div class="section-label">
+    <div class="line"></div>
+    <h2>VENDOR HIGHLIGHTS</h2>
+  </div>
+
+  <div class="vendor-section">
+
+    <!-- 华为 Huawei -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo huawei">HW</div>
+        <div class="vendor-info">
+          <h3>华为 Huawei</h3>
+          <span class="vendor-tag">6G 先行者 · U6GHz 全场景布局</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="strategy-tag">通信基础设施：率先为6G铺路，抢占黄金频段</div>
+        <div class="vendor-product">U6GHz 完整产品矩阵</div>
+        <div class="vendor-desc">
+          在黄金频段争夺战中率先布局，发布全场景系列化产品。通过AI优化网络协议，释放5G-A潜能并支持向<strong>6G平滑演进</strong>，确保万物互联时代的带宽与稳定性
+        </div>
+        <ul class="vendor-highlights">
+          <li>首发U6GHz全场景产品矩阵，覆盖宏站、微站、室分等全场景</li>
+          <li>AI驱动的网元智能、网络智能、业务智能三大引擎协同</li>
+        </ul>
+        <div class="vendor-images single">
+          <div class="img-wrap">
+            <img src="images/huawei_booth.png" alt="华为MWC展台 Advancing All Intelligence" loading="lazy">
+            <div class="img-caption">华为 MWC 2026 展台</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- OPPO -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo oppo">OPO</div>
+        <div class="vendor-info">
+          <h3>OPPO</h3>
+          <span class="vendor-tag">端侧大模型 Omni · 多模态AI先锋</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="strategy-tag">端侧优先：不依赖云端提供高性能、私密的AI体验</div>
+        <div class="vendor-product">端侧大模型 Omni</div>
+        <div class="vendor-desc">
+          行业首个支持<strong>语音、视频、文本多模态输入</strong>的端侧大模型，支持实时视频流语义理解，使手机端侧AI能够深入感知物理世界。端侧AI翻译准确率较传统模型提升15%，断网环境下依然能流畅运行
+        </div>
+        <div class="vendor-images single">
+          <div class="img-wrap">
+            <img src="images/oppo_omni.jpg" alt="OPPO端侧Omni模型" loading="lazy">
+            <div class="img-caption">端侧 Omni 多模态大模型演示</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 荣耀 Honor -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo honor">HON</div>
+        <div class="vendor-info">
+          <h3>荣耀 Honor</h3>
+          <span class="vendor-tag">Robot Phone & 首款消费级人形机器人</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="strategy-tag">生态转型：从手机厂商向AI终端生态公司转型</div>
+        <div class="vendor-product">Robot Phone</div>
+        <div class="vendor-desc">
+          将微型相机和4DoF机械云台塞进手机，结合AI智能体实现带情感的自动跟拍。并宣布与电影摄影机品牌阿莱(ARRI)合作
+        </div>
+        <div class="vendor-product">荣耀ROBOT人形机器人</div>
+        <div class="vendor-desc">
+          发布能后空翻、跳舞、走太空步的人形机器人，主打机器人<strong>情绪价值</strong>（读懂用户）
+        </div>
+        <div class="vendor-price">
+          <span class="label">预估价</span> ¥10,999 - ¥12,999
+        </div>
+        <div class="vendor-images triple">
+          <div class="img-wrap">
+            <img src="images/honor_stage_new.png" alt="荣耀Robot Phone发布会" loading="lazy">
+            <div class="img-caption">Robot Phone 发布会</div>
+          </div>
+          <div class="img-wrap">
+            <img src="images/honor_robot_new.png" alt="荣耀人形机器人" loading="lazy">
+            <div class="img-caption">人形机器人舞台展示</div>
+          </div>
+          <div class="img-wrap">
+            <img src="images/honor_robot_phone_new.gif" alt="荣耀Robot Phone" loading="lazy">
+            <div class="img-caption">Robot Phone</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- vivo -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo vivo">VIVO</div>
+        <div class="vendor-info">
+          <h3>vivo</h3>
+          <span class="vendor-tag">X300 Ultra & 专业影像平台</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="strategy-tag">软硬分离：影像系统向专业电影工作流演进</div>
+        <div class="vendor-product">X300 Ultra 外接摄像头</div>
+        <div class="vendor-desc">
+          不再和普通手机比拍照，而是<strong>和单反/微单抢市场</strong>。展出带400mm外接长焦镜头，联合斯莫格定制专业手持Cage（带冷靴、散热风扇）和电影机UI界面
+        </div>
+        <ul class="vendor-highlights">
+          <li>裸机230g，总重量600g</li>
+          <li>套餐包预估 ¥8,500 - ¥9,500</li>
+          <li>组织架构升级：胡柏山为总裁，确立人形机器人为核心赛道</li>
+        </ul>
+        <div class="vendor-price">
+          <span class="label">起售价</span> ¥6,499 - ¥6,999 (12+256GB)
+        </div>
+        <div class="vendor-images single">
+          <div class="img-wrap">
+            <img src="images/vivo_new.png" alt="vivo X300 Ultra摄影套件" loading="lazy">
+            <div class="img-caption">X300 Ultra 专业摄影套件</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 小米 -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo xiaomi">MI</div>
+        <div class="vendor-info">
+          <h3>小米</h3>
+          <span class="vendor-tag">CyberOne人形机器人 & 纯电超跑</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="strategy-tag">技术打通：未来5年大批量投入人工厂</div>
+        <div class="vendor-product">纯电超跑概念车 (VGT)</div>
+        <div class="vendor-desc">
+          核心设计理念为「由风塑形」，追求在不添加额外空气动力学套件的情况下通过车身本体实现极致气动性能。搭载小米自研900V碳化硅平台，支持近<strong>1900匹马力</strong>
+        </div>
+        <ul class="vendor-highlights">
+          <li>内置Xiaomi Pulse智能助手和HyperVision系统</li>
+          <li>可根据驾驶模式实时调整显示界面</li>
+          <li>实现小米「人车家全生态」无缝衔接</li>
+          <li>人形机器人已在小米汽车工厂「实习」，能自主完成打螺丝、搬运等工作</li>
+        </ul>
+        <div class="vendor-images single">
+          <div class="img-wrap">
+            <img src="images/xiaomi_vgt.jpg" alt="小米纯电超跑VGT概念车" loading="lazy">
+            <div class="img-caption">小米纯电超跑 VGT 概念车</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 传音 Tecno -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo tecno">TEC</div>
+        <div class="vendor-info">
+          <h3>传音 Tecno & Ulefone</h3>
+          <span class="vendor-tag">磁吸模块化概念机</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="strategy-tag">外设扩展化：验证「影像能力扩展化」路线</div>
+        <div class="vendor-product">多模块概念机</div>
+        <div class="vendor-desc">
+          展示围绕影像外设做标准化接口的磁吸模块化概念机。模块化配件包括<strong>121dB大喇叭、长焦镜头、移动电源、运动相机</strong>等8个磁吸模块
+        </div>
+        <div class="vendor-price">
+          <span class="label">预估价</span> ¥7,000 - ¥9,000（配件¥400-1500/件）
+        </div>
+        <div class="vendor-images single">
+          <div class="img-wrap">
+            <img src="images/tecno_new.jpg" alt="传音磁吸模块化概念机" loading="lazy">
+            <div class="img-caption">磁吸模块化概念机</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Ulefone -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo ulefone">ULE</div>
+        <div class="vendor-info">
+          <h3>Ulefone 欧乐风</h3>
+          <span class="vendor-tag">三防智能终端 · 主打海外市场</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="vendor-product">RugOne Xsnap 7 Pro（带磁吸相机）</div>
+        <div class="vendor-desc">
+          2014年成立于深圳，专门从事三防(Rugged)智能终端设计。特点包括<strong>热成像、红外夜视仪、防摔防水</strong>等
+        </div>
+        <ul class="vendor-highlights">
+          <li>机型价格：1000-8000左右</li>
+          <li>一般重量：450g以上</li>
+        </ul>
+        <div class="vendor-price">
+          <span class="label">预估价</span> ¥6,000 - ¥6,500
+        </div>
+        <div class="vendor-images single">
+          <div class="img-wrap">
+            <img src="images/ulefone_new.png" alt="Ulefone三防手机" loading="lazy">
+            <div class="img-caption">Ulefone 三防手机实拍</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 联想 -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo lenovo">LEN</div>
+        <div class="vendor-info">
+          <h3>联想 Lenovo</h3>
+          <span class="vendor-tag">AI Workmate & Legion Go Fold</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="strategy-tag">打破空间限制：从「AI全生态」跨越电脑重新定义办公空间</div>
+        <div class="vendor-product">AI Workmate 数字看板</div>
+        <div class="vendor-desc">
+          本身就是一台完整PC（Intel Ultra Series 3 + 1TB SSD + 64GB内存），可将屏幕里的信息投射到桌面上形成「轻量看板」。<strong>实际上是一个「空间中心」</strong>，打破了屏幕的限制
+        </div>
+        <ul class="vendor-highlights">
+          <li>5.4英寸480×480 LCD屏幕，四麦克风阵列</li>
+          <li>支持文档自动化：扫描纸质草稿转化为结构化PPT</li>
+        </ul>
+        <div class="vendor-product">Legion Go Fold</div>
+        <div class="vendor-desc">
+          展开为11.6英寸POLED大屏，配合磁吸键盘变身Windows 11迷你笔记本
+        </div>
+        <ul class="vendor-highlights">
+          <li>主体平板约638g，手柄约230g</li>
+          <li>全机合体约868g</li>
+        </ul>
+        <div class="vendor-price">
+          <span class="label">预估价</span> ¥13,000 - ¥16,500
+        </div>
+        <div class="vendor-images">
+          <div class="img-wrap">
+            <img src="images/lenovo_workmate_new.png" alt="联想AI Workmate" loading="lazy">
+            <div class="img-caption">AI Workmate</div>
+          </div>
+          <div class="img-wrap">
+            <img src="images/lenovo_fold_new.webp" alt="联想Legion Go Fold" loading="lazy">
+            <div class="img-caption">Legion Go Fold</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 魅族 -->
+    <article class="vendor-card animate-on-scroll">
+      <div class="vendor-header">
+        <div class="vendor-logo meizu">MZU</div>
+        <div class="vendor-info">
+          <h3>魅族 Meizu</h3>
+          <span class="vendor-tag">全面终止传统手机硬件研发</span>
+        </div>
+      </div>
+      <div class="vendor-body">
+        <div class="strategy-tag">All in AI：全面战略收缩硬件，转向AI驱动软件产品</div>
+        <div class="vendor-desc">
+          辟谣退市传闻，但确认因市场高度内卷及内存涨价等原因，<strong>正式暂停国内手机新品自研硬件项目</strong>。转向以AI驱动软件产品为主导的发展方向，押注Flyme开放生态系统
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>MWC 2026 · BARCELONA · FIELD REPORT</p>
+  </footer>
+
+</div>
+
+<script>
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, index * 60);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

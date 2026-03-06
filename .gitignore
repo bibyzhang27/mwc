@@ -1,0 +1,20 @@
+# Python scripts and tools
+*.py
+*.pyc
+__pycache__/
+
+# Build/tool directories
+html-to-long-image-skill/
+check/
+node_modules/
+
+# Generated files
+*.pdf
+shot_log.txt
+mwc2026_full.png
+mwc2026_long.png
+page1_img1.png
+
+# OS files
+.DS_Store
+.codebuddy/

@@ -267,17 +267,23 @@
   .insight-card:hover::before { opacity: 1; }
   .insight-card:hover { border-color: rgba(0,240,255,0.3); }
 
+  .insight-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
   .insight-icon {
     font-size: 20px;
-    margin-bottom: 8px;
-    display: block;
+    flex-shrink: 0;
+    line-height: 1;
   }
 
   .insight-title {
     font-size: 14px;
     font-weight: 700;
     color: var(--accent-cyan);
-    margin-bottom: 6px;
   }
 
   .insight-desc {
@@ -680,23 +686,31 @@
 
   <div class="insights">
     <div class="insight-card animate-on-scroll">
-      <span class="insight-icon">🤖</span>
-      <div class="insight-title">手机厂商转型机器人赛道</div>
+      <div class="insight-top">
+        <span class="insight-icon">🤖</span>
+        <div class="insight-title">手机厂商转型机器人赛道</div>
+      </div>
       <div class="insight-desc">硬件方面（电机、传感器、芯片）与人形机器人高度通用，手机厂商在传感器融合、图像处理等技术线上积累的经验可直接应用于机器人开发</div>
     </div>
     <div class="insight-card animate-on-scroll">
-      <span class="insight-icon">📸</span>
-      <div class="insight-title">影像系统持续「向上突破」</div>
+      <div class="insight-top">
+        <span class="insight-icon">📸</span>
+        <div class="insight-title">影像系统持续「向上突破」</div>
+      </div>
       <div class="insight-desc">从手机内置镜头竞赛升级到外接模块化摄影系统，专业影像平台化趋势明显，手持Cage、400mm外接长焦等方案涌现</div>
     </div>
     <div class="insight-card animate-on-scroll">
-      <span class="insight-icon">🧩</span>
-      <div class="insight-title">模块化与磁吸生态兴起</div>
+      <div class="insight-top">
+        <span class="insight-icon">🧩</span>
+        <div class="insight-title">模块化与磁吸生态兴起</div>
+      </div>
       <div class="insight-desc">传音等厂商展示磁吸模块化概念，通过标准化接口实现影像、音频、能源等模块可拆卸组合，重新定义手机形态</div>
     </div>
     <div class="insight-card animate-on-scroll">
-      <span class="insight-icon">💡</span>
-      <div class="insight-title">AI从屏幕走向空间</div>
+      <div class="insight-top">
+        <span class="insight-icon">💡</span>
+        <div class="insight-title">AI从屏幕走向空间</div>
+      </div>
       <div class="insight-desc">联想AI Workmate将信息投影到物理空间、魅族全面转向AI驱动软件产品——AI正在突破屏幕限制进入「空间计算」时代</div>
     </div>
   </div>
@@ -788,12 +802,12 @@
         <div class="vendor-desc">
           将微型相机和4DoF机械云台塞进手机，结合AI智能体实现带情感的自动跟拍。并宣布与电影摄影机品牌阿莱(ARRI)合作
         </div>
+        <div class="vendor-price">
+          <span class="label">预估价</span> ¥10,999 - ¥12,999
+        </div>
         <div class="vendor-product">荣耀ROBOT人形机器人</div>
         <div class="vendor-desc">
           发布能后空翻、跳舞、走太空步的人形机器人，主打机器人<strong>情绪价值</strong>（读懂用户）
-        </div>
-        <div class="vendor-price">
-          <span class="label">预估价</span> ¥10,999 - ¥12,999
         </div>
         <div class="vendor-images triple">
           <div class="img-wrap">
@@ -835,7 +849,6 @@
         <ul class="vendor-highlights">
           <li>裸机230g，总重量600g</li>
           <li>套餐包预估 ¥8,500 - ¥9,500</li>
-          <li>组织架构升级：胡柏山为总裁，确立人形机器人为核心赛道</li>
         </ul>
         <div class="vendor-price">
           <span class="label">起售价</span> ¥6,499 - ¥6,999 (12+256GB)
@@ -859,11 +872,11 @@
         <div class="vendor-logo"><img src="images/logo_xiaomi.png" alt="小米"></div>
         <div class="vendor-info">
           <h3>小米</h3>
-          <span class="vendor-tag">CyberOne人形机器人 & 纯电超跑</span>
+          <span class="vendor-tag">Vision GT 纯电超跑概念车</span>
         </div>
       </div>
       <div class="vendor-body">
-        <div class="strategy-tag">技术打通：未来5年大批量投入人工厂</div>
+        <div class="strategy-tag">由风塑形：中国首款VGT概念超跑亮相</div>
         <div class="vendor-product">纯电超跑概念车 (VGT)</div>
         <div class="vendor-desc">
           核心设计理念为「由风塑形」，追求在不添加额外空气动力学套件的情况下通过车身本体实现极致气动性能。搭载小米自研900V碳化硅平台，支持近<strong>1900匹马力</strong>
@@ -929,27 +942,32 @@
         </div>
       </div>
       <div class="vendor-body">
-        <div class="vendor-product">RugOne Xsnap 7 Pro（带磁吸相机）</div>
         <div class="vendor-desc">
-          2014年成立于深圳，专门从事三防(Rugged)智能终端设计。特点包括<strong>热成像、红外夜视仪、防摔防水</strong>等
+          2014年成立，总部位于中国深圳，专门从事三防（Rugged）智能终端设计的科技公司。<strong>主打海外市场</strong>
         </div>
         <ul class="vendor-highlights">
           <li>机型价格：1000-8000左右</li>
+          <li>机型特点：热成像、红外夜视仪、防摔防水等</li>
           <li>一般重量：450g以上</li>
         </ul>
+        <div class="vendor-product">RugOne Xsnap 7 Pro（带磁吸相机）</div>
         <div class="vendor-price">
           <span class="label">预估价</span> ¥6,000 - ¥6,500
         </div>
-        <div class="vendor-images single">
+        <div class="vendor-images">
           <div class="img-wrap">
             <img src="images/ulefone_new.png" alt="Ulefone三防手机" loading="lazy">
             <div class="img-caption">Ulefone 三防手机实拍</div>
           </div>
+          <div class="img-wrap">
+            <img src="images/ulefone_xsnap_demo.gif" alt="Ulefone RugOne Xsnap 7 Pro 磁吸相机演示" loading="lazy">
+            <div class="img-caption">RugOne Xsnap 7 Pro 磁吸相机演示</div>
+          </div>
         </div>
         <div class="vendor-sources">
           <div class="vendor-sources-label">Sources</div>
+          <a href="https://www.ulefone.com/news" target="_blank">Ulefone RugOne Xsnap 7 Pro with Detachable Camera at MWC 2026 — ulefone.com</a>
           <a href="https://new.qq.com/rain/a/20260228A05N6R00" target="_blank">手机摄像头能拆下来用?Ulefone新机有点意思 — 腾讯网</a>
-          <a href="https://new.qq.com/rain/a/20260228A0702R00" target="_blank">镜头能拆还能单独拍摄?国产手机新品即将亮相MWC2026 — 腾讯网</a>
         </div>
       </div>
     </article>
@@ -1018,8 +1036,8 @@
         </div>
         <div class="vendor-sources">
           <div class="vendor-sources-label">Sources</div>
+          <a href="https://www.gizmochina.com/2026/02/meizu-halts-phone-hardware/" target="_blank">Meizu halts phone hardware, pivots to AI software — Gizmochina</a>
           <a href="https://new.qq.com/rain/a/20260227A05JEA00" target="_blank">魅族科技战略转型:暂停国内手机新产品自研硬件项目 — 腾讯网</a>
-          <a href="https://finance.jrj.com.cn/2026/03/02085756138481.shtml" target="_blank">魅族暂停手机自研硬件,全面转向AI软件与Flyme开放生态 — 金融界</a>
         </div>
       </div>
     </article>

@@ -322,22 +322,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 11px;
-    font-weight: 900;
-    color: #fff;
     flex-shrink: 0;
+    overflow: hidden;
+    background: rgba(255,255,255,0.95);
   }
 
-  .vendor-logo.huawei { background: linear-gradient(135deg, #c41230, #ff3355); }
-  .vendor-logo.oppo { background: linear-gradient(135deg, #1a6b3c, #2ecc71); }
-  .vendor-logo.honor { background: linear-gradient(135deg, #0055ff, #00ccff); }
-  .vendor-logo.vivo { background: linear-gradient(135deg, #003cff, #7b61ff); }
-  .vendor-logo.xiaomi { background: linear-gradient(135deg, #ff6b00, #ff2d55); }
-  .vendor-logo.tecno { background: linear-gradient(135deg, #1a1a2e, #4a4ae8); }
-  .vendor-logo.ulefone { background: linear-gradient(135deg, #2d5016, #5cb85c); }
-  .vendor-logo.lenovo { background: linear-gradient(135deg, #e60012, #ff4d4d); }
-  .vendor-logo.meizu { background: linear-gradient(135deg, #4a90d9, #00d4ff); }
+  .vendor-logo img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
 
   .vendor-info h3 {
     font-size: 15px;
@@ -611,7 +605,7 @@
     <!-- 华为 Huawei -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo huawei">HW</div>
+        <div class="vendor-logo"><img src="images/logo_huawei.png" alt="华为"></div>
         <div class="vendor-info">
           <h3>华为 Huawei</h3>
           <span class="vendor-tag">6G 先行者 · U6GHz 全场景布局</span>
@@ -639,7 +633,7 @@
     <!-- OPPO -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo oppo">OPO</div>
+        <div class="vendor-logo"><img src="images/logo_oppo.png" alt="OPPO"></div>
         <div class="vendor-info">
           <h3>OPPO</h3>
           <span class="vendor-tag">端侧大模型 Omni · 多模态AI先锋</span>
@@ -663,7 +657,7 @@
     <!-- 荣耀 Honor -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo honor">HON</div>
+        <div class="vendor-logo"><img src="images/logo_honor.png" alt="荣耀"></div>
         <div class="vendor-info">
           <h3>荣耀 Honor</h3>
           <span class="vendor-tag">Robot Phone & 首款消费级人形机器人</span>
@@ -702,7 +696,7 @@
     <!-- vivo -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo vivo">VIVO</div>
+        <div class="vendor-logo"><img src="images/logo_vivo.png" alt="vivo"></div>
         <div class="vendor-info">
           <h3>vivo</h3>
           <span class="vendor-tag">X300 Ultra & 专业影像平台</span>
@@ -734,7 +728,7 @@
     <!-- 小米 -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo xiaomi">MI</div>
+        <div class="vendor-logo"><img src="images/logo_xiaomi.png" alt="小米"></div>
         <div class="vendor-info">
           <h3>小米</h3>
           <span class="vendor-tag">CyberOne人形机器人 & 纯电超跑</span>
@@ -764,9 +758,9 @@
     <!-- 传音 Tecno -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo tecno">TEC</div>
+        <div class="vendor-logo"><img src="images/logo_tecno.png" alt="传音"></div>
         <div class="vendor-info">
-          <h3>传音 Tecno & Ulefone</h3>
+          <h3>传音 Tecno</h3>
           <span class="vendor-tag">磁吸模块化概念机</span>
         </div>
       </div>
@@ -791,7 +785,7 @@
     <!-- Ulefone -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo ulefone">ULE</div>
+        <div class="vendor-logo"><img src="images/logo_ulefone.png" alt="Ulefone"></div>
         <div class="vendor-info">
           <h3>Ulefone 欧乐风</h3>
           <span class="vendor-tag">三防智能终端 · 主打海外市场</span>
@@ -821,7 +815,7 @@
     <!-- 联想 -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo lenovo">LEN</div>
+        <div class="vendor-logo"><img src="images/logo_lenovo.png" alt="联想"></div>
         <div class="vendor-info">
           <h3>联想 Lenovo</h3>
           <span class="vendor-tag">AI Workmate & Legion Go Fold</span>
@@ -864,7 +858,7 @@
     <!-- 魅族 -->
     <article class="vendor-card animate-on-scroll">
       <div class="vendor-header">
-        <div class="vendor-logo meizu">MZU</div>
+        <div class="vendor-logo"><img src="images/logo_meizu.png" alt="魅族"></div>
         <div class="vendor-info">
           <h3>魅族 Meizu</h3>
           <span class="vendor-tag">全面终止传统手机硬件研发</span>

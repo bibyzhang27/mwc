@@ -553,6 +553,65 @@
     margin: 8px 16px 0;
   }
 
+  /* ===== FOOTER LINKS ===== */
+  .footer-links {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .footer-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-glow);
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .footer-link:hover {
+    border-color: rgba(0,240,255,0.3);
+    background: rgba(0,240,255,0.03);
+  }
+
+  .footer-link.official {
+    border-color: rgba(0,240,255,0.25);
+  }
+
+  .footer-link-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: var(--accent-cyan);
+    background: rgba(0,240,255,0.08);
+    border: 1px solid rgba(0,240,255,0.15);
+    border-radius: 4px;
+    padding: 2px 8px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .footer-link-title {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .footer-link-url {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    flex-shrink: 0;
+  }
+
   /* ===== FOOTER ===== */
   .footer {
     text-align: center;
@@ -647,7 +706,7 @@
   <!-- ===== VENDOR HIGHLIGHTS ===== -->
   <div class="section-label">
     <div class="line"></div>
-    <h2>VENDOR HIGHLIGHTS</h2>
+    <h2>HIGHLIGHTS</h2>
   </div>
 
   <div class="vendor-section">
@@ -788,9 +847,8 @@
           </div>
         </div>
         <div class="vendor-sources">
-          <div class="vendor-sources-label">Sources</div>
-          <a href="http://tech.hexun.com/2026-03-03/223580611.html" target="_blank">vivo X300 Ultra亮相MWC 2026:配备400mm增距镜 — 和讯网</a>
-          <a href="http://news.pconline.com.cn/2108/21083112.html" target="_blank">口袋里的摄影机!vivo X300 Ultra视频能力巨幅提升 — 太平洋科技</a>
+          <div class="vendor-sources-label">Source</div>
+          <a href="https://www.vivo.com/en/about-vivo/news" target="_blank">vivo X300 Ultra亮相MWC 2026 — vivo.com</a>
         </div>
       </div>
     </article>
@@ -967,6 +1025,39 @@
       </div>
     </article>
 
+  </div>
+
+  <!-- ===== FURTHER READING ===== -->
+  <div class="section-label">
+    <div class="line"></div>
+    <h2>FURTHER READING</h2>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.mwcbarcelona.com/" target="_blank" class="footer-link official">
+      <span class="footer-link-tag">官方</span>
+      <span class="footer-link-title">MWC Barcelona 2026 Official Website</span>
+      <span class="footer-link-url">mwcbarcelona.com</span>
+    </a>
+    <a href="https://www.36kr.com/p/3708674537484675" target="_blank" class="footer-link">
+      <span class="footer-link-tag">36氪</span>
+      <span class="footer-link-title">逛展MWC两天,这10个科技新品最值得关注</span>
+      <span class="footer-link-url">36kr.com</span>
+    </a>
+    <a href="https://www.36kr.com/p/3708480131084806" target="_blank" class="footer-link">
+      <span class="footer-link-tag">36氪</span>
+      <span class="footer-link-title">MWC 2026现场直击:当AI成为UI,终端边界正在消失</span>
+      <span class="footer-link-url">36kr.com</span>
+    </a>
+    <a href="https://www.huxiu.com/article/4839269.html" target="_blank" class="footer-link">
+      <span class="footer-link-tag">虎嗅</span>
+      <span class="footer-link-title">阿里千问AI眼镜MWC硬刚Meta,1997元现货引爆AI终端战</span>
+      <span class="footer-link-url">huxiu.com</span>
+    </a>
+    <a href="https://www.huxiu.com/article/4839539.html" target="_blank" class="footer-link">
+      <span class="footer-link-tag">虎嗅</span>
+      <span class="footer-link-title">MWC2026洞察:英伟达与高通的6G路线博弈与产业权力较量</span>
+      <span class="footer-link-url">huxiu.com</span>
+    </a>
   </div>
 
   <!-- ===== FOOTER ===== -->
